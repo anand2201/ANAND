@@ -1,0 +1,12 @@
+import pandas as pd
+import numpy as np
+from pandas import Series  as ss
+from pandas import DataFrame as df
+n1=pd.read_csv('/home/sw3/Documents/jan11/hivepgms/negative1/negative_hive.csv',header=None)
+n1
+n1=n1.rename(columns={0:'rating'})
+n1=n1.rename(columns={1:'total_rating'})
+n1
+n1.to_csv('/home/sw3/Documents/jan11/hivepgms/negative1panda.csv')
+pwd
+%hist -f /home/sw3/Documents/jan11/neg_panda

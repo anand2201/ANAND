@@ -1,0 +1,10 @@
+CREATE TABLE IF NOT EXISTS positive_rating1 ( id String, text String, rating FLOAT)  ROW FORMAT DELIMITED FIELDS TERMINATED BY ',' LINES TERMINATED BY '\n' ;
+
+
+load data local inpath '/home/sw3/Documents/jan11/positive1.csv'into table positive_rating1 ;
+
+select  rating , COUNT(rating)  from positive_rating1 GROUP BY positive_rating1.rating;
+
+
+INSERT OVERWRITE LOCAL DIRECTORY '/home/sw3/Documents/jan11/positive1'ROW FORMAT DELIMITED FIELDS TERMINATED BY ',' LINES TERMINATED BY '\n' select  rating , COUNT(rating)  from positive_rating1 GROUP BY positive_rating1.rating ;
+

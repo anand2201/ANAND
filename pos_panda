@@ -1,0 +1,23 @@
+import pandas as pd
+import numpy as np
+from pandas import Series
+from pandas import DataFrame as df
+f1=pd.read_csv('/home/sw3/Documents/newdata/posvnew.csv')
+f1=pd.read_csv('/home/sw3/Documents/jan11/hivepgms/positive1/positive_trating.csv')
+f1
+f1=f1.rename(columns = {0:'rating'})
+f1
+f1=f1.rename(columns = {0:'rating'})
+f1
+f1=pd.read_csv('/home/sw3/Documents/jan11/hivepgms/positive1/positive_trating.csv',header=None)
+f1
+f1=f1.rename(columns = {0:'rating'})
+f1
+f1=f1.rename(columns = {0:'total_rating'})
+f1
+f1=f1.rename(columns = {1:'total_rating'})
+f1
+f1.to_csv('positive1_datap')
+f1.to_csv('/home/sw3/Documents/jan11/hivepgms/positive1panda.csv')
+pwd
+%hist -f /home/sw3/Documents/jan11/pos_panda
